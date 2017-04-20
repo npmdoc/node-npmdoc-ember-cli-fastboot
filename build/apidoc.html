@@ -1,0 +1,1714 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+    >ember-cli-fastboot (v1.0.0-beta.16)</a>
+</h1>
+<h4>Server-side rendering for Ember.js apps</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ember-cli-fastboot">module ember-cli-fastboot</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot._getEmberVersion">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>_getEmberVersion
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.buildFastBootTree">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>buildFastBootTree
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.config">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>config
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.contentFor">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>contentFor
+            <span class="apidocSignatureSpan">(type, config, contents)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.emit">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>emit
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.fastboot_config">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>fastboot_config
+            <span class="apidocSignatureSpan">(inputNode, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.fastboot_server">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>fastboot_server
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.included">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>included
+            <span class="apidocSignatureSpan">(app)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.includedCommands">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>includedCommands
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.init">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.on">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>on
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.outputReady">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>outputReady
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.postBuild">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>postBuild
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.postprocessTree">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>postprocessTree
+            <span class="apidocSignatureSpan">(type, tree)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.preconcatTree">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>preconcatTree
+            <span class="apidocSignatureSpan">(tree)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.treeForApp">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>treeForApp
+            <span class="apidocSignatureSpan">(defaultTree)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ember-cli-fastboot.</span>fastboot_config.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ember-cli-fastboot.</span>fastboot_server.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">ember-cli-fastboot.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ember-cli-fastboot.fastboot_config">module ember-cli-fastboot.fastboot_config</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.fastboot_config.fastboot_config">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>fastboot_config
+            <span class="apidocSignatureSpan">(inputNode, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ember-cli-fastboot.fastboot_config.prototype">module ember-cli-fastboot.fastboot_config.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.fastboot_config.prototype.build">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_config.prototype.</span>build
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.fastboot_config.prototype.buildDependencies">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_config.prototype.</span>buildDependencies
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.fastboot_config.prototype.buildHostWhitelist">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_config.prototype.</span>buildHostWhitelist
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.fastboot_config.prototype.buildManifest">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_config.prototype.</span>buildManifest
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.fastboot_config.prototype.constructor">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_config.prototype.</span>constructor
+            <span class="apidocSignatureSpan">(inputNode, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.fastboot_config.prototype.normalizeHostWhitelist">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_config.prototype.</span>normalizeHostWhitelist
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.fastboot_config.prototype.readAssetManifest">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_config.prototype.</span>readAssetManifest
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.fastboot_config.prototype.toJSONString">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_config.prototype.</span>toJSONString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.fastboot_config.prototype.writeFileIfContentChanged">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_config.prototype.</span>writeFileIfContentChanged
+            <span class="apidocSignatureSpan">(outputPath, content)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ember-cli-fastboot.fastboot_server">module ember-cli-fastboot.fastboot_server</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.fastboot_server.fastboot_server">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>fastboot_server
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ember-cli-fastboot.fastboot_server.prototype">module ember-cli-fastboot.fastboot_server.prototype</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_server.prototype.</span>restartAgain</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.fastboot_server.prototype.exec">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_server.prototype.</span>exec
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.fastboot_server.prototype.outputReady">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_server.prototype.</span>outputReady
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.fastboot_server.prototype.printError">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_server.prototype.</span>printError
+            <span class="apidocSignatureSpan">(e)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.fastboot_server.prototype.require">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_server.prototype.</span>require
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.fastboot_server.prototype.restart">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_server.prototype.</span>restart
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.fastboot_server.prototype.run">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_server.prototype.</span>run
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.fastboot_server.prototype.start">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_server.prototype.</span>start
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-fastboot.fastboot_server.prototype.stop">
+            function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_server.prototype.</span>stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_server.prototype.</span>nextSocketId</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_server.prototype.</span>fastboot</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_server.prototype.</span>httpServer</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_server.prototype.</span>restartPromise</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_server.prototype.</span>sockets</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ember-cli-fastboot" id="apidoc.module.ember-cli-fastboot">module ember-cli-fastboot</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot._getEmberVersion" id="apidoc.element.ember-cli-fastboot._getEmberVersion">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>_getEmberVersion
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_getEmberVersion = function () {
+  var VersionChecker = require(&#x27;ember-cli-version-checker&#x27;);
+  var checker = new VersionChecker(this);
+  var emberVersionChecker = checker.for(&#x27;ember-source&#x27;, &#x27;npm&#x27;);
+
+  if (emberVersionChecker.version) {
+    return emberVersionChecker;
+  }
+
+  return checker.for(&#x27;ember&#x27;, &#x27;bower&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return &#x27;return FastBoot.config();&#x27;;
+  }
+},
+
+treeForApp: function(defaultTree) {
+  var trees = [defaultTree];
+
+  if (this.<span class="apidocCodeKeywordSpan">_getEmberVersion</span>().lt(&#x27;2.10.0-alpha.1&#x27;)) {
+    trees.push(this.treeGenerator(path.resolve(this.root, &#x27;app-lt-2-9&#x27;)));
+  }
+
+  return mergeTrees(trees, { overwrite: true });
+},
+
+/**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.buildFastBootTree" id="apidoc.element.ember-cli-fastboot.buildFastBootTree">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>buildFastBootTree
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">buildFastBootTree = function () {
+  var fastbootBuild = new FastBootBuild({
+    ui: this.ui,
+    assetMapPath: this.assetMapPath,
+    project: this.project,
+    app: this.app,
+    parent: this.parent
+  });
+
+  return fastbootBuild.toTree();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * adds the `fastboot-config.json` file to the root.
+ *
+ * FASTBOOT_DISABLED is a pre 1.0 power user flag to
+ * disable the fastboot build while retaining the fastboot service.
+ */
+postprocessTree: function(type, tree) {
+  if (type === &#x27;all&#x27; &#x26;&#x26; !process.env.FASTBOOT_DISABLED) {
+    var fastbootTree = this.<span class="apidocCodeKeywordSpan">buildFastBootTree</span>();
+
+    // Merge the package.json with the existing tree
+    return mergeTrees([tree, fastbootTree], {overwrite: true});
+  }
+
+  return tree;
+},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.config" id="apidoc.element.ember-cli-fastboot.config">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>config
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">config = function () {
+  if (this.app &#x26;&#x26; this.app.options.__is_building_fastboot__) {
+    return { APP: { autoboot: false } };
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var linesToRemove = contents.length;
+  while(linesToRemove) {
+    // Clear out the default config from ember-cli
+    contents.pop();
+    linesToRemove--;
+  }
+
+  return &#x27;return FastBoot.<span class="apidocCodeKeywordSpan">config</span>();&#x27;;
+}
+  },
+
+  treeForApp: function(defaultTree) {
+var trees = [defaultTree];
+
+if (this._getEmberVersion().lt(&#x27;2.10.0-alpha.1&#x27;)) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.contentFor" id="apidoc.element.ember-cli-fastboot.contentFor">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>contentFor
+        <span class="apidocSignatureSpan">(type, config, contents)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">contentFor = function (type, config, contents) {
+  if (type === &#x27;body&#x27;) {
+    return &#x22;&#x3c;!-- EMBER_CLI_FASTBOOT_BODY --&#x3e;&#x22;;
+  }
+
+  if (type === &#x27;head&#x27;) {
+    return &#x22;&#x3c;!-- EMBER_CLI_FASTBOOT_TITLE --&#x3e;&#x3c;!-- EMBER_CLI_FASTBOOT_HEAD --&#x3e;&#x22;;
+  }
+
+  if (type === &#x27;app-boot&#x27;) {
+    return fastbootAppModule(config.modulePrefix);
+  }
+
+  if (type === &#x27;config-module&#x27; &#x26;&#x26; this.app.options.__is_building_fastboot__) {
+    var linesToRemove = contents.length;
+    while(linesToRemove) {
+      // Clear out the default config from ember-cli
+      contents.pop();
+      linesToRemove--;
+    }
+
+    return &#x27;return FastBoot.config();&#x27;;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.emit" id="apidoc.element.ember-cli-fastboot.emit">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>emit
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">emit = function () {
+  this.emitter.emit.apply(this.emitter, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    parent: this.parent
+  });
+
+  return fastbootBuild.toTree();
+},
+
+outputReady: function() {
+  this.<span class="apidocCodeKeywordSpan">emit</span>(&#x27;outputReady&#x27;);
+},
+
+postBuild: function() {
+  this.emit(&#x27;postBuild&#x27;);
+},
+
+_getEmberVersion: function() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.fastboot_config" id="apidoc.element.ember-cli-fastboot.fastboot_config">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>fastboot_config
+        <span class="apidocSignatureSpan">(inputNode, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FastBootConfig(inputNode, options) {
+  Plugin.call(this, [inputNode], {
+    annotation: &#x22;Generate: FastBoot package.json&#x22;
+  });
+
+  this.project = options.project;
+  this.name = options.name;
+  this.assetMapEnabled = options.assetMapEnabled;
+  this.ui = options.ui;
+  this.fastbootAppConfig = options.fastbootAppConfig;
+  this.outputPaths = options.outputPaths;
+  this.appConfig = options.appConfig;
+  this._fileToChecksumMap = {};
+
+  if (this.fastbootAppConfig &#x26;&#x26; this.fastbootAppConfig.htmlFile) {
+    this.htmlFile = this.fastbootAppConfig.htmlFile;
+  } else {
+    this.htmlFile = &#x27;index.html&#x27;;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.fastboot_server" id="apidoc.element.ember-cli-fastboot.fastboot_server">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>fastboot_server
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Class() {
+  var length = arguments.length;
+
+  if (length === 0)      this.init();
+  else if (length === 1) this.init(arguments[0]);
+  else                   this.init.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.included" id="apidoc.element.ember-cli-fastboot.included">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>included
+        <span class="apidocSignatureSpan">(app)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">included = function (app) {
+  patchEmberApp(app);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.includedCommands" id="apidoc.element.ember-cli-fastboot.includedCommands">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>includedCommands
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">includedCommands = function () {
+  return {
+    &#x27;fastboot&#x27;:       require(&#x27;./lib/commands/fastboot&#x27;)(this),
+
+<span class="apidocCodeCommentSpan">    /* fastboot:build is deprecated and will be removed in a future version */
+</span>    &#x27;fastboot:build&#x27;: require(&#x27;./lib/commands/fastboot-build&#x27;)
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.init" id="apidoc.element.ember-cli-fastboot.init">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init() {
+  this._super.init &#x26;&#x26; this._super.init.apply(this, arguments);
+
+  this.emitter = new EventEmitter();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.on" id="apidoc.element.ember-cli-fastboot.on">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>on
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">on = function () {
+  this.emitter.on.apply(this.emitter, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  restartAgain: false,
+  restartPromise: null,
+  sockets: {},
+
+  run(options) {
+debug(&#x27;run&#x27;);
+const ready = () =&#x3e; this.outputReady(options);
+this.addon.<span class="apidocCodeKeywordSpan">on</span>(&#x27;outputReady&#x27;, ready);
+  },
+
+  start(options) {
+debug(&#x27;start&#x27;);
+
+const fastbootMiddleware = this.require(&#x27;fastboot-express-middleware&#x27;);
+const FastBoot = this.require(&#x27;fastboot&#x27;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.outputReady" id="apidoc.element.ember-cli-fastboot.outputReady">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>outputReady
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">outputReady = function () {
+  this.emit(&#x27;outputReady&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  require,
+  restartAgain: false,
+  restartPromise: null,
+  sockets: {},
+
+  run(options) {
+debug(&#x27;run&#x27;);
+const ready = () =&#x3e; this.<span class="apidocCodeKeywordSpan">outputReady</span>(options);
+this.addon.on(&#x27;outputReady&#x27;, ready);
+  },
+
+  start(options) {
+debug(&#x27;start&#x27;);
+
+const fastbootMiddleware = this.require(&#x27;fastboot-express-middleware&#x27;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.postBuild" id="apidoc.element.ember-cli-fastboot.postBuild">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>postBuild
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">postBuild = function () {
+  this.emit(&#x27;postBuild&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.postprocessTree" id="apidoc.element.ember-cli-fastboot.postprocessTree">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>postprocessTree
+        <span class="apidocSignatureSpan">(type, tree)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">postprocessTree = function (type, tree) {
+  if (type === &#x27;all&#x27; &#x26;&#x26; !process.env.FASTBOOT_DISABLED) {
+    var fastbootTree = this.buildFastBootTree();
+
+    // Merge the package.json with the existing tree
+    return mergeTrees([tree, fastbootTree], {overwrite: true});
+  }
+
+  return tree;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.preconcatTree" id="apidoc.element.ember-cli-fastboot.preconcatTree">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>preconcatTree
+        <span class="apidocSignatureSpan">(tree)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">preconcatTree = function (tree) {
+  return filterInitializers(tree, this.app.name);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+function addonPreconcatTree(tree) {
+  var workingTree = tree;
+
+  this.project.addons.forEach(function(addon) {
+    if (addon.preconcatTree) {
+      workingTree = addon.<span class="apidocCodeKeywordSpan">preconcatTree</span>(workingTree);
+    }
+  });
+
+  return workingTree;
+}
+
+module.exports = patchEmberApp;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.treeForApp" id="apidoc.element.ember-cli-fastboot.treeForApp">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>treeForApp
+        <span class="apidocSignatureSpan">(defaultTree)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">treeForApp = function (defaultTree) {
+  var trees = [defaultTree];
+
+  if (this._getEmberVersion().lt(&#x27;2.10.0-alpha.1&#x27;)) {
+    trees.push(this.treeGenerator(path.resolve(this.root, &#x27;app-lt-2-9&#x27;)));
+  }
+
+  return mergeTrees(trees, { overwrite: true });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ember-cli-fastboot.fastboot_config" id="apidoc.module.ember-cli-fastboot.fastboot_config">module ember-cli-fastboot.fastboot_config</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.fastboot_config.fastboot_config" id="apidoc.element.ember-cli-fastboot.fastboot_config.fastboot_config">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>fastboot_config
+        <span class="apidocSignatureSpan">(inputNode, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FastBootConfig(inputNode, options) {
+  Plugin.call(this, [inputNode], {
+    annotation: &#x22;Generate: FastBoot package.json&#x22;
+  });
+
+  this.project = options.project;
+  this.name = options.name;
+  this.assetMapEnabled = options.assetMapEnabled;
+  this.ui = options.ui;
+  this.fastbootAppConfig = options.fastbootAppConfig;
+  this.outputPaths = options.outputPaths;
+  this.appConfig = options.appConfig;
+  this._fileToChecksumMap = {};
+
+  if (this.fastbootAppConfig &#x26;&#x26; this.fastbootAppConfig.htmlFile) {
+    this.htmlFile = this.fastbootAppConfig.htmlFile;
+  } else {
+    this.htmlFile = &#x27;index.html&#x27;;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ember-cli-fastboot.fastboot_config.prototype" id="apidoc.module.ember-cli-fastboot.fastboot_config.prototype">module ember-cli-fastboot.fastboot_config.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.fastboot_config.prototype.build" id="apidoc.element.ember-cli-fastboot.fastboot_config.prototype.build">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_config.prototype.</span>build
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">build = function () {
+  this.buildDependencies();
+  this.buildManifest();
+  this.buildHostWhitelist();
+
+  var outputPath = path.join(this.outputPath, &#x27;package.json&#x27;);
+  this.writeFileIfContentChanged(outputPath, this.toJSONString());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.fastboot_config.prototype.buildDependencies" id="apidoc.element.ember-cli-fastboot.fastboot_config.prototype.buildDependencies">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_config.prototype.</span>buildDependencies
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">buildDependencies = function () {
+  var dependencies = {};
+  var moduleWhitelist = [];
+  var ui = this.ui;
+
+  eachAddonPackage(this.project, function(pkg) {
+    var deps = getFastBootDependencies(pkg, ui);
+
+    if (deps) {
+      deps.forEach(function(dep) {
+        var version = getDependencyVersion(pkg, dep);
+
+        if (dep in dependencies) {
+          version = dependencies[dep];
+          ui.writeLine(fmt(&#x22;Duplicate FastBoot dependency %s. Versions may mismatch. Using range %s.&#x22;, dep, version), ui.WARNING
+);
+          return;
+        }
+
+        moduleWhitelist.push(dep);
+
+        if (version) {
+          dependencies[dep] = version;
+        }
+      });
+    }
+  });
+
+  var pkg = this.project.pkg;
+  var projectDeps = pkg.fastbootDependencies;
+
+  if (projectDeps) {
+    projectDeps.forEach(function(dep) {
+      moduleWhitelist.push(dep);
+
+      var version = pkg.dependencies &#x26;&#x26; pkg.dependencies[dep];
+      if (version) {
+        dependencies[dep] = version;
+      }
+    });
+  }
+
+  this.dependencies = dependencies;
+  this.moduleWhitelist = uniq(moduleWhitelist);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+/**
+ * The main hook called by Broccoli Plugin. Used to build or
+ * rebuild the tree. In this case, we generate the configuration
+ * and write it to `package.json`.
+ */
+FastBootConfig.prototype.build = function() {
+  this.<span class="apidocCodeKeywordSpan">buildDependencies</span>();
+  this.buildManifest();
+  this.buildHostWhitelist();
+
+  var outputPath = path.join(this.outputPath, &#x27;package.json&#x27;);
+  this.writeFileIfContentChanged(outputPath, this.toJSONString());
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.fastboot_config.prototype.buildHostWhitelist" id="apidoc.element.ember-cli-fastboot.fastboot_config.prototype.buildHostWhitelist">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_config.prototype.</span>buildHostWhitelist
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">buildHostWhitelist = function () {
+  if (!!this.fastbootAppConfig) {
+    this.hostWhitelist = this.fastbootAppConfig.hostWhitelist;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * The main hook called by Broccoli Plugin. Used to build or
+ * rebuild the tree. In this case, we generate the configuration
+ * and write it to `package.json`.
+ */
+FastBootConfig.prototype.build = function() {
+this.buildDependencies();
+this.buildManifest();
+this.<span class="apidocCodeKeywordSpan">buildHostWhitelist</span>();
+
+var outputPath = path.join(this.outputPath, &#x27;package.json&#x27;);
+this.writeFileIfContentChanged(outputPath, this.toJSONString());
+};
+
+FastBootConfig.prototype.writeFileIfContentChanged = function(outputPath, content) {
+var previous = this._fileToChecksumMap[outputPath];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.fastboot_config.prototype.buildManifest" id="apidoc.element.ember-cli-fastboot.fastboot_config.prototype.buildManifest">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_config.prototype.</span>buildManifest
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">buildManifest = function () {
+  var appFileName = path.basename(this.outputPaths.app.js).split(&#x27;.&#x27;)[0];
+  var appFile = &#x27;fastboot/&#x27; + appFileName + &#x27;.js&#x27;;
+  var vendorFileName = path.basename(this.outputPaths.vendor.js).split(&#x27;.&#x27;)[0];
+  var vendorFile = &#x27;fastboot/&#x27; + vendorFileName + &#x27;.js&#x27;;
+
+  var manifest = {
+    appFiles: [appFile],
+    vendorFiles: [vendorFile],
+    htmlFile: this.htmlFile
+  };
+
+  var rewrittenAssets = this.readAssetManifest();
+
+  if (rewrittenAssets) {
+    var assets = {};
+
+    // Because the assetMap was written before the files in the
+    // `asset` folder were moved to the `fastboot` folder,
+    // we have to rewrite them here.
+    for (var key in rewrittenAssets.assets) {
+      var rewrittenKey = assetToFastboot(key);
+      assets[rewrittenKey] = assetToFastboot(rewrittenAssets.assets[key]);
+    }
+
+    // update the vendor file with the fingerprinted file
+    var rewrittenVendorFiles = [];
+    manifest[&#x27;vendorFiles&#x27;].forEach(function(file) {
+      rewrittenVendorFiles.push(assets[file]);
+    });
+    manifest[&#x27;vendorFiles&#x27;] = rewrittenVendorFiles;
+
+    // update the app files array with fingerprinted files
+    var rewrittenAppFiles = [];
+    manifest[&#x27;appFiles&#x27;].forEach(function(file) {
+      rewrittenAppFiles.push(assets[file]);
+    });
+    manifest[&#x27;appFiles&#x27;] = rewrittenAppFiles;
+
+  }
+
+  this.manifest = manifest;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+ * The main hook called by Broccoli Plugin. Used to build or
+ * rebuild the tree. In this case, we generate the configuration
+ * and write it to `package.json`.
+ */
+FastBootConfig.prototype.build = function() {
+  this.buildDependencies();
+  this.<span class="apidocCodeKeywordSpan">buildManifest</span>();
+  this.buildHostWhitelist();
+
+  var outputPath = path.join(this.outputPath, &#x27;package.json&#x27;);
+  this.writeFileIfContentChanged(outputPath, this.toJSONString());
+};
+
+FastBootConfig.prototype.writeFileIfContentChanged = function(outputPath, content) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.fastboot_config.prototype.constructor" id="apidoc.element.ember-cli-fastboot.fastboot_config.prototype.constructor">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_config.prototype.</span>constructor
+        <span class="apidocSignatureSpan">(inputNode, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FastBootConfig(inputNode, options) {
+  Plugin.call(this, [inputNode], {
+    annotation: &#x22;Generate: FastBoot package.json&#x22;
+  });
+
+  this.project = options.project;
+  this.name = options.name;
+  this.assetMapEnabled = options.assetMapEnabled;
+  this.ui = options.ui;
+  this.fastbootAppConfig = options.fastbootAppConfig;
+  this.outputPaths = options.outputPaths;
+  this.appConfig = options.appConfig;
+  this._fileToChecksumMap = {};
+
+  if (this.fastbootAppConfig &#x26;&#x26; this.fastbootAppConfig.htmlFile) {
+    this.htmlFile = this.fastbootAppConfig.htmlFile;
+  } else {
+    this.htmlFile = &#x27;index.html&#x27;;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.fastboot_config.prototype.normalizeHostWhitelist" id="apidoc.element.ember-cli-fastboot.fastboot_config.prototype.normalizeHostWhitelist">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_config.prototype.</span>normalizeHostWhitelist
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">normalizeHostWhitelist = function () {
+  if (!this.hostWhitelist) {
+    return;
+  }
+
+  return this.hostWhitelist.map(function(entry) {
+    // Is a regex
+    if (entry.source) {
+      return &#x27;/&#x27; + entry.source + &#x27;/&#x27;;
+    } else {
+      return entry;
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+FastBootConfig.prototype.toJSONString = function() {
+return JSON.stringify({
+  dependencies: this.dependencies,
+  fastboot: {
+    moduleWhitelist: this.moduleWhitelist,
+    schemaVersion: LATEST_SCHEMA_VERSION,
+    manifest: this.manifest,
+    hostWhitelist: this.<span class="apidocCodeKeywordSpan">normalizeHostWhitelist</span>(),
+    appConfig: this.appConfig
+  }
+}, null, 2);
+};
+
+FastBootConfig.prototype.normalizeHostWhitelist = function() {
+if (!this.hostWhitelist) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.fastboot_config.prototype.readAssetManifest" id="apidoc.element.ember-cli-fastboot.fastboot_config.prototype.readAssetManifest">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_config.prototype.</span>readAssetManifest
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readAssetManifest = function () {
+  var ui = this.ui;
+  var assetMapPath = path.join(this.inputPaths[0], &#x27;fastbootAssetMap.json&#x27;);
+  var assetMapEnabled = this.assetMapEnabled;
+
+  try {
+    var assetMap = JSON.parse(fs.readFileSync(assetMapPath));
+    return assetMap;
+  } catch (e) {
+    if (this.assetMapEnabled) {
+      ui.writeLine(fmt(&#x22;fastbootAssetMap.json not found at: %s&#x22;, assetMapPath), ui.WARNING);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  var manifest = {
+appFiles: [appFile],
+vendorFiles: [vendorFile],
+htmlFile: this.htmlFile
+  };
+
+  var rewrittenAssets = this.<span class="apidocCodeKeywordSpan">readAssetManifest</span>();
+
+  if (rewrittenAssets) {
+var assets = {};
+
+// Because the assetMap was written before the files in the
+// `asset` folder were moved to the `fastboot` folder,
+// we have to rewrite them here.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.fastboot_config.prototype.toJSONString" id="apidoc.element.ember-cli-fastboot.fastboot_config.prototype.toJSONString">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_config.prototype.</span>toJSONString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toJSONString = function () {
+  return JSON.stringify({
+    dependencies: this.dependencies,
+    fastboot: {
+      moduleWhitelist: this.moduleWhitelist,
+      schemaVersion: LATEST_SCHEMA_VERSION,
+      manifest: this.manifest,
+      hostWhitelist: this.normalizeHostWhitelist(),
+      appConfig: this.appConfig
+    }
+  }, null, 2);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ */
+FastBootConfig.prototype.build = function() {
+this.buildDependencies();
+this.buildManifest();
+this.buildHostWhitelist();
+
+var outputPath = path.join(this.outputPath, &#x27;package.json&#x27;);
+this.writeFileIfContentChanged(outputPath, this.<span class="apidocCodeKeywordSpan">toJSONString</span>());
+};
+
+FastBootConfig.prototype.writeFileIfContentChanged = function(outputPath, content) {
+var previous = this._fileToChecksumMap[outputPath];
+var next = md5Hex(content);
+
+if (previous !== next || !fs.existsSync(outputPath)) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.fastboot_config.prototype.writeFileIfContentChanged" id="apidoc.element.ember-cli-fastboot.fastboot_config.prototype.writeFileIfContentChanged">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_config.prototype.</span>writeFileIfContentChanged
+        <span class="apidocSignatureSpan">(outputPath, content)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeFileIfContentChanged = function (outputPath, content) {
+  var previous = this._fileToChecksumMap[outputPath];
+  var next = md5Hex(content);
+
+  if (previous !== next || !fs.existsSync(outputPath)) {
+    fs.writeFileSync(outputPath, content);
+    this._fileToChecksumMap[outputPath] = next; // update map
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ */
+FastBootConfig.prototype.build = function() {
+this.buildDependencies();
+this.buildManifest();
+this.buildHostWhitelist();
+
+var outputPath = path.join(this.outputPath, &#x27;package.json&#x27;);
+this.<span class="apidocCodeKeywordSpan">writeFileIfContentChanged</span>(outputPath, this.toJSONString());
+};
+
+FastBootConfig.prototype.writeFileIfContentChanged = function(outputPath, content) {
+var previous = this._fileToChecksumMap[outputPath];
+var next = md5Hex(content);
+
+if (previous !== next || !fs.existsSync(outputPath)) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ember-cli-fastboot.fastboot_server" id="apidoc.module.ember-cli-fastboot.fastboot_server">module ember-cli-fastboot.fastboot_server</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.fastboot_server.fastboot_server" id="apidoc.element.ember-cli-fastboot.fastboot_server.fastboot_server">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.</span>fastboot_server
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Class() {
+  var length = arguments.length;
+
+  if (length === 0)      this.init();
+  else if (length === 1) this.init(arguments[0]);
+  else                   this.init.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ember-cli-fastboot.fastboot_server.prototype" id="apidoc.module.ember-cli-fastboot.fastboot_server.prototype">module ember-cli-fastboot.fastboot_server.prototype</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.fastboot_server.prototype.exec" id="apidoc.element.ember-cli-fastboot.fastboot_server.prototype.exec">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_server.prototype.</span>exec
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function fn() {
+  var self = this;
+  var l = arguments.length;
+  var args = new Array(l + 1);
+  var promiseInput = false;
+
+  for (var i = 0; i &#x3c; l; ++i) {
+    var arg = arguments[i];
+
+    if (!promiseInput) {
+      // TODO: clean this up
+      promiseInput = needsPromiseInput(arg);
+      if (promiseInput === GET_THEN_ERROR$1) {
+        var p = new Promise$1(noop);
+        reject(p, GET_THEN_ERROR$1.value);
+        return p;
+      } else if (promiseInput &#x26;&#x26; promiseInput !== true) {
+        arg = wrapThenable(promiseInput, arg);
+      }
+    }
+    args[i] = arg;
+  }
+
+  var promise = new Promise$1(noop);
+
+  args[l] = function (err, val) {
+    if (err) reject(promise, err);else if (options === undefined) resolve(promise, val);else if (options === true) resolve(promise
+, arrayResult(arguments));else if (isArray(options)) resolve(promise, makeObject(arguments, options));else resolve(promise, val);
+  };
+
+  if (promiseInput) {
+    return handlePromiseInput(promise, args, nodeFunc, self);
+  } else {
+    return handleValueInput(promise, args, nodeFunc, self);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.fastboot_server.prototype.outputReady" id="apidoc.element.ember-cli-fastboot.fastboot_server.prototype.outputReady">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_server.prototype.</span>outputReady
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">outputReady(options) {
+  if (this.fastboot) {
+    this.ui.writeLine(`Reloading FastBoot`);
+    return this.restart();
+  } else {
+    return this.start(options)
+      .catch(e =&#x3e; this.printError(e));
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  require,
+  restartAgain: false,
+  restartPromise: null,
+  sockets: {},
+
+  run(options) {
+debug(&#x27;run&#x27;);
+const ready = () =&#x3e; this.<span class="apidocCodeKeywordSpan">outputReady</span>(options);
+this.addon.on(&#x27;outputReady&#x27;, ready);
+  },
+
+  start(options) {
+debug(&#x27;start&#x27;);
+
+const fastbootMiddleware = this.require(&#x27;fastboot-express-middleware&#x27;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.fastboot_server.prototype.printError" id="apidoc.element.ember-cli-fastboot.fastboot_server.prototype.printError">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_server.prototype.</span>printError
+        <span class="apidocSignatureSpan">(e)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">printError = function (e) {
+  var preamble = [&#x22;There was an error trying to run your application in FastBoot.\n&#x22;,
+    &#x22;This is usually caused by either your application code or an addon trying to access &#x22; +
+    &#x22;an API that isn&#x27;t available in Node.js.&#x22;];
+
+  var stackInfo = parseStackTrace(e);
+
+  var fileName = stackInfo.fileName;
+  var lineNumber = stackInfo.lineNumber;
+
+  if (fileName) {
+    // Print file name and line number from the top of the stack. This is displayed
+    // anyway, of course, but not everyone knows how to read a stack trace. This makes
+    // it more obvious.
+    var badFilePath = path.relative(process.cwd(), fileName);
+    preamble.push(&#x22;Based on the stack trace, it looks like the exception was generated in &#x22; + badFilePath + &#x22; on line &#x22; + lineNumber
+ + &#x22;.&#x22;);
+
+    // If the exception is coming from `vendor.js`, that usually means it&#x27;s from an addon and thus may be
+    // out of the user&#x27;s control. Give the user some instructions so they can try to figure out which
+    // addon is causing the problem.
+    if (fileName.substr(-9) === &#x27;vendor.js&#x27;) {
+      preamble.push(&#x22;Because it&#x27;s coming from vendor.js, an addon is most likely responsible for this error. You should look at
+this &#x22; +
+                    &#x22;file and line number to determine which addon is not yet FastBoot compatible.&#x22;);
+
+    } else {
+      preamble.push(&#x22;The exception is probably coming from your app. Look at this file and line number to determine what is triggering
+ the exception.&#x22;);
+    }
+
+    preamble.push(&#x22;\nThe full stack trace is:&#x22;);
+  }
+
+  this.ui.writeError(preamble.join(&#x27;\n&#x27;) + &#x27;\n&#x27;);
+  this.ui.writeError(e);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+outputReady(options) {
+  if (this.fastboot) {
+    this.ui.writeLine(`Reloading FastBoot`);
+    return this.restart();
+  } else {
+    return this.start(options)
+      .catch(e =&#x3e; this.<span class="apidocCodeKeywordSpan">printError</span>(e));
+  }
+},
+
+/*
+ * Try to show a useful error message if we&#x27;re not able to start the user&#x27;s
+ * app in FastBoot.
+ */
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.fastboot_server.prototype.require" id="apidoc.element.ember-cli-fastboot.fastboot_server.prototype.require">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_server.prototype.</span>require
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function require(path) {
+  try {
+    exports.requireDepth += 1;
+    return self.require(path);
+  } finally {
+    exports.requireDepth -= 1;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+If the package you are using is not built-in to Node, **you must also
+specify the package and a version in the `package.json` `dependencies`
+hash.** Built-in modules (`path`, `fs`, etc.) only need to be added to
+`fastbootDependencies`.
+
+### Using Dependencies
+
+From your Ember.js app, you can run `FastBoot.<span class="apidocCodeKeywordSpan">require</span>()` to require a
+package. This is identical to the CommonJS `require` except it checks
+all requests against the whitelist first.
+
+```js
+let path = FastBoot.require(&#x27;path&#x27;);
+let filePath = path.join(&#x27;tmp&#x27;, session.getID());
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.fastboot_server.prototype.restart" id="apidoc.element.ember-cli-fastboot.fastboot_server.prototype.restart">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_server.prototype.</span>restart
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">restart() {
+  return this.fastboot.reload();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+restart() {
+  return this.fastboot.reload();
+},
+
+outputReady(options) {
+  if (this.fastboot) {
+    this.ui.writeLine(`Reloading FastBoot`);
+    return this.<span class="apidocCodeKeywordSpan">restart</span>();
+  } else {
+    return this.start(options)
+      .catch(e =&#x3e; this.printError(e));
+  }
+},
+
+/*
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.fastboot_server.prototype.run" id="apidoc.element.ember-cli-fastboot.fastboot_server.prototype.run">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_server.prototype.</span>run
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run(options) {
+  debug(&#x27;run&#x27;);
+  const ready = () =&#x3e; this.outputReady(options);
+  this.addon.on(&#x27;outputReady&#x27;, ready);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.fastboot_server.prototype.start" id="apidoc.element.ember-cli-fastboot.fastboot_server.prototype.start">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_server.prototype.</span>start
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start(options) {
+  debug(&#x27;start&#x27;);
+
+  const fastbootMiddleware = this.require(&#x27;fastboot-express-middleware&#x27;);
+  const FastBoot = this.require(&#x27;fastboot&#x27;);
+  const express = this.require(&#x27;express&#x27;);
+
+  this.fastboot = new FastBoot({
+    distPath: options.outputPath
+  });
+
+  const middleware = fastbootMiddleware({
+    outputPath: options.outputPath,
+    fastboot: this.fastboot
+  });
+
+  const app = express();
+  app.use(require(&#x27;compression&#x27;)());
+
+  if (options.serveAssets) {
+    app.get(&#x27;/&#x27;, middleware);
+    app.use(express.static(options.assetsPath));
+  }
+  app.get(&#x27;/*&#x27;, middleware);
+  app.use((req, res) =&#x3e; res.sendStatus(404));
+
+  this.httpServer = this.http.createServer(app);
+
+  // Track open sockets for fast restart
+  this.httpServer.on(&#x27;connection&#x27;, (socket) =&#x3e; {
+    const socketId = this.nextSocketId++;
+    debug(`open socket ${socketId}`);
+    this.sockets[socketId] = socket;
+    socket.on(&#x27;close&#x27;, () =&#x3e; {
+      debug(`close socket ${socketId}`);
+      delete this.sockets[socketId];
+    });
+  });
+
+  return new RSVP.Promise((resolve, reject) =&#x3e; {
+    this.httpServer.listen(options.port, options.host, (err) =&#x3e; {
+      if (err) { return reject(err); }
+      const o = this.httpServer.address();
+      const port = o.port;
+      const family = o.family;
+      let host = o.address;
+      if (family === &#x27;IPv6&#x27;) { host = `[${host}]`; }
+      this.ui.writeLine(`Ember FastBoot running at http://${host}:${port}`);
+      resolve();
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+},
+
+outputReady(options) {
+  if (this.fastboot) {
+    this.ui.writeLine(`Reloading FastBoot`);
+    return this.restart();
+  } else {
+    return this.<span class="apidocCodeKeywordSpan">start</span>(options)
+      .catch(e =&#x3e; this.printError(e));
+  }
+},
+
+/*
+ * Try to show a useful error message if we&#x27;re not able to start the user&#x27;s
+ * app in FastBoot.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-fastboot.fastboot_server.prototype.stop" id="apidoc.element.ember-cli-fastboot.fastboot_server.prototype.stop">
+        function <span class="apidocSignatureSpan">ember-cli-fastboot.fastboot_server.prototype.</span>stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stop() {
+  debug(&#x27;stop&#x27;);
+  return new RSVP.Promise((resolve, reject) =&#x3e; {
+    if (!this.httpServer) { return resolve(); }
+
+    // Stop accepting new connections
+    this.httpServer.close((err) =&#x3e; {
+      debug(&#x27;close&#x27;, Object.keys(this.sockets));
+      if (err) { return reject(err); }
+      this.httpServer = null;
+      resolve();
+    });
+
+    // Force close existing connections
+    Object.keys(this.sockets).forEach(k =&#x3e; this.sockets[k].destroy());
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
